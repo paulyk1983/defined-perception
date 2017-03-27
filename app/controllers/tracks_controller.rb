@@ -7,4 +7,9 @@ class TracksController < ApplicationController
       redirect_to '/'
     end
   end
+
+  def new
+  end
+
+  
 end

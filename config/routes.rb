@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get '/tracks' => 'tracks#index'
+  get '/tracks/new' => 'tracks#new'
+  post '/tracks' => 'tracks#create'
 end
