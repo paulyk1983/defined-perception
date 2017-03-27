@@ -1,2 +1,7 @@
 <h1>Tracks</h1>
-<a href="/tracks/new">Add A Track</a>
+<% @tracks.each do |track| %>
+  <p><a href="<%= track.audio_url %>" target="_blank"><%= track.name %></a></p>
+<% end %>
+<br>
+<hr>
+<p><a href="/tracks/new">Add A Track</a></p>

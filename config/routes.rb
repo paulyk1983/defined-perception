@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/tracks' => 'tracks#index'
   get '/tracks/new' => 'tracks#new'
   post '/tracks' => 'tracks#create'
+
 end
