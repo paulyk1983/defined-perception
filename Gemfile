@@ -35,12 +35,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# for env
+gem 'dotenv-rails', :groups => [:development, :test], :require => 'dotenv/rails-now'
+
 # user auth
 gem 'devise', '~> 4'
 
 # for uploading and downloading files
 gem 'aws-sdk', '~> 2.3'
 gem 'aws-sdk-v1'
+
+# for sending secure emails
+gem 'sendgrid-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
