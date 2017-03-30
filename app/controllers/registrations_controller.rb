@@ -4,6 +4,8 @@ class RegistrationsController < Devise::RegistrationsController
   include SendGrid
 
   def create
+
+    # BELOW IS FROM CONTROLLER FROM DEVISE GEM REPO 
     # build_resource(sign_up_params)
 
     # resource.save
@@ -24,11 +26,12 @@ class RegistrationsController < Devise::RegistrationsController
     #   respond_with resource
     # end
 
-    from = Email.new(email: 'paulyk1983@gmail.com')
-    to = Email.new(email: "paul@finishlinecorp.com")
-    subject = 'test email subject'
+    from = Email.new(email: 'paulykdev@gmail.com')
+    to = Email.new(email: "paulyk1983@gmail.com")
+    subject = 'New DP User'
 
-    message = "A user has signed up!"
+    build_resource(sign_up_params)
+    message = "A user has signed up! Email: #{resource.email}"
 
     content = Content.new(type: 'text/html', value: message)
     mail = Mail.new(from, subject, to, content)
