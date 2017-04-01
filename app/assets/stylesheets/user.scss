@@ -1,0 +1,15 @@
+.entry-containers {
+  z-index:20; 
+  position:relative; 
+  background-color:rgba(255,255,255, 0.7); 
+  padding:20px;
+  margin-top:50px;
+}
+
+.entry-containers p, .entry-containers li {
+  font-size:17px;
+}
+
+.field {
+  margin-bottom:15px;
+}

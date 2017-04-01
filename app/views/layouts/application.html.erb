@@ -3,21 +3,34 @@
   <head>
     <title>DefinedPerception</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
   </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-inverse">
-        <div class="container">
+  <body>  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -41,16 +54,14 @@
               <li><a href="/users/sign_up">Sign Up</a></li>                
             <% end %>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
+    </nav>
+    
 
-
-      </nav>
-    </header>
-
-    <div class="container">
-      <% flash.each do |name, message| %>
-        <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+    <div class="container">    
+      <% flash.each do |name, message| %> 
+        <div class="alert alert-<%= name %> alert-dismissible" role="alert" style="z-index:25; position:relative; background-color:white;">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
           <%= message.html_safe %>
@@ -59,6 +70,8 @@
 
       <%= yield %>
     </div>
+
+    <img class="img-responsive" style="position:absolute; opacity:0.7; top:10px;" src="https://s3.amazonaws.com/defined-perception/images/CAM_0610.JPG">
   </body>
   
    <!-- Bootstrap core JavaScript
