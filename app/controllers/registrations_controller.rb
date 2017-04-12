@@ -26,12 +26,13 @@ class RegistrationsController < Devise::RegistrationsController
     #   respond_with resource
     # end
 
+    # NOTIFY ADMIN OF USER SIGN-UP
     from = Email.new(email: 'paulykdev@gmail.com')
     to = Email.new(email: "paulyk1983@gmail.com")
     subject = 'New DP User'
 
     build_resource(sign_up_params)
-    message = "A user has signed up! Email: #{resource.email}"
+    message = "user, #{resource.first_name} has signed up! Email: #{resource.email}"
 
     content = Content.new(type: 'text/html', value: message)
     mail = Mail.new(from, subject, to, content)
