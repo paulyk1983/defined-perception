@@ -1,19 +1,17 @@
-<div class="entry-containers">
-  <h1>Defined Perception Music</h1>
-  <br>
-  <% if current_user %>
-    <h3>Hello User!</h3>
-    <p>This website was designed to host Defined Perception songs so band members and fans can have access to DP music. However, as an open source project, this website can become much more than that...</p>
-    <p>To start off, though, check out Defined Perception's one and only <a href="/tracks">studio album</a>. (More tracks to come soon!)</p>
-    <h3>Pipeline</h3>
-    <ul>
-      <li>Add user permissions (admin, band member, vip fan, fan)</li>
-      <li>Add song upload ability</li>
-      <li>Add album creation and association to track ability</li>
-      <li>Add image index page and upload ability</li>
-      <li>Add ability to add comments and ideas</li>
-    </ul>
-  <% else %>
-    <h4>Welcome! <a href="/users/sign_in">Log In</a> or <a href="/users/sign_up">Sign Up</a> to get started.</h4>
-  <% end %>
-</div>
+<h1>Defined Perception Music</h1>
+<br>
+<% if current_user %>
+  <h3>Hello User!</h3>
+  <p>This website was designed to host Defined Perception songs so band members and fans can have access to DP music. However, as an open source project, this website can become much more than that...</p>
+  <p>To start off, though, check out Defined Perception's one and only <a href="/tracks">studio album</a>. (More tracks to come soon!)</p>
+  <h3>Pipeline</h3>
+  <ul>
+    <li>Add user permissions (admin, band member, vip fan, fan)</li>
+    <li>Add song upload ability</li>
+    <li>Add album creation and association to track ability</li>
+    <li>Add image index page and upload ability</li>
+    <li>Add ability to add comments and ideas</li>
+  </ul>
+<% else %>
+  <h4>Welcome! <a href="/users/sign_in">Log In</a> or <a href="/users/sign_up">Sign Up</a> to get started.</h4>
+<% end %>
